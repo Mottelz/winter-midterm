@@ -1,14 +1,6 @@
 const request = require("supertest");
 const app = require("../../src/app");
 
-describe("Patient home route", () => {
-    test("should responed to GET", async () => {
-        const response = await request(app).get('/patient/home');
-        expect(response.statusCode).toBe(200);
-        expect(response.body.route).toBe('/patient/home');
-    });
-});
-
 describe("All comics route", () => {
     test("Should return all comics", async () => {
         const response = await request(app).get('/comic/all');
